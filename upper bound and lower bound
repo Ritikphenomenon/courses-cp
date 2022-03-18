@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	// LOWEWR_BOUND
+   int ar[10]={1,2,3,4,5,5,8,10,15,23};
+   auto it=lower_bound(ar,ar+10,5);//return address of that element ,if not found return address one element greater than that.
+   cout<<*it-1<<endl;
+    auto it1=lower_bound(ar,ar+10,5)-ar;
+	cout<<endl;
+	cout<<it1;
+	//UPEER_BOUND
+   auto it2=upper_bound(ar,ar+10,5);//return address of that element greater than that element ,if not found return address of element greater than that.
+   cout<<*it2-1<<endl;
+    auto it3=upper_bound(ar,ar+10,5)-ar;
+	cout<<endl;
+	cout<<it3;
+}
