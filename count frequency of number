@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[]={1,9,10,10,10,10,10,11,100};
+    int n=sizeof(arr)/sizeof(int);
+    int key;
+    cin>>key;
+   bool present=binary_search(arr,arr+n,key);//lon(n)
+   if(present)
+   {
+	   cout<<"present\n";
+   }
+   else
+   {
+	   cout<<"absent\n";
+   }
+   /*
+   determine the frequency of key
+   */
+   auto lb=lower_bound(arr,arr+n,key);//it returns the that address.
+   cout<<endl<<"lower bound of 40 is"<<(lb-arr)<<endl;
+   auto ub=upper_bound(arr,arr+n,key);//it returns the that address.
+   cout<<"upper bound of that number\n"<<ub-arr<<endl;
+   cout<<"frequency of that number "<<(ub-lb)<<endl;
+}
+
